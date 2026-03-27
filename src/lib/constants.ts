@@ -4,9 +4,9 @@ export const SITE = {
   description:
     "Cada reunión sin seguimiento es conocimiento perdido. MeetingAgent transcribe, resume y genera action items automáticamente — sin APIs de pago ni servidores en la nube.",
   github: "https://github.com/Izanvz/MeetingAgent",
-  linkedin: "https://linkedin.com/in/izanvillarejo",
+  linkedin: "https://www.linkedin.com/in/izan-villarejo-ai/",
   portfolio: "https://portfolio-izanv.vercel.app",
-  formspreeId: "YOUR_FORMSPREE_ID",
+  formspreeId: "xkopojvj",
 };
 
 export const STATS = [
@@ -71,6 +71,16 @@ export const INTEGRATIONS = [
     name: "Manual Upload",
     description: "Sube cualquier archivo de audio desde tu dispositivo.",
     status: "available" as const,
+  },
+  {
+    name: "Jira",
+    description: "Exporta action items directamente a tu proyecto de Jira como issues asignados.",
+    status: "coming-soon" as const,
+  },
+  {
+    name: "Linear",
+    description: "Crea issues en Linear automáticamente a partir de las tareas de la reunión.",
+    status: "coming-soon" as const,
   },
 ];
 
