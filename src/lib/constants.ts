@@ -6,7 +6,7 @@ export const SITE = {
   github: "https://github.com/Izanvz/MeetingAgent",
   linkedin: "https://www.linkedin.com/in/izan-villarejo-ai/",
   portfolio: "https://portfolio-izanv.vercel.app",
-  formspreeId: "xkopojvj",
+  formspreeId: process.env.NEXT_PUBLIC_FORMSPREE_ID ?? "",
 };
 
 export const STATS = [
