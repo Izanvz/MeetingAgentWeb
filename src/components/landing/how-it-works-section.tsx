@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import { HOW_IT_WORKS } from "@/lib/constants";
 
-// Each step a different accent — matches semantic meaning
+// Each step a different accent - matches semantic meaning
 const STEP_STYLES = [
   { ring: "border-cyan-500/50 bg-cyan-950/30",   text: "text-cyan-400",    glow: "shadow-cyan-500/10",   line: "from-cyan-500/40" },
   { ring: "border-violet-500/50 bg-violet-950/30", text: "text-violet-400", glow: "shadow-violet-500/10", line: "from-violet-500/40" },
@@ -29,7 +29,7 @@ export function HowItWorksSection() {
         </motion.div>
 
         <div className="relative">
-          {/* Connector line — gradient through all step colors */}
+          {/* Connector line: gradient through all step colors */}
           <div className="absolute left-[2.75rem] top-8 bottom-8 w-px bg-gradient-to-b from-cyan-500/50 via-violet-500/30 via-emerald-500/30 to-amber-500/30 hidden md:block" />
 
           <div className="space-y-8">
@@ -46,7 +46,7 @@ export function HowItWorksSection() {
                 >
                   {/* Step circle */}
                   <div className={`shrink-0 w-11 h-11 rounded-full border ${style.ring} flex items-center justify-center shadow-lg ${style.glow} transition-all group-hover:scale-110 duration-200`}>
-                    <span className={`font-mono text-xs font-bold ${style.text}`}>{item.step}</span>
+                    <span className={`text-xs font-bold ${style.text}`} style={{ fontFamily: "var(--font-code)" }}>{item.step}</span>
                   </div>
 
                   {/* Content */}

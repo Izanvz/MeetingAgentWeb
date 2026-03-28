@@ -19,9 +19,21 @@ export function NavBar() {
     <TooltipProvider>
       <header className="sticky top-0 z-50 border-b border-zinc-800/60 bg-zinc-950/80 backdrop-blur-md">
         <nav className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2">
-            <span className="text-violet-400 font-mono text-lg">▶</span>
-            <span className="font-semibold text-zinc-100">{SITE.name}</span>
+          <Link href="/" className="flex items-center gap-2 group">
+            <span
+              className="font-mono text-lg transition-transform group-hover:scale-110 duration-200"
+              style={{
+                background: "linear-gradient(90deg, #8B5CF6, #C084FC, #22D3EE, #8B5CF6)",
+                backgroundSize: "200% auto",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                backgroundClip: "text",
+                animation: "shimmer 4s linear infinite",
+              }}
+            >
+              ▶
+            </span>
+            <span className="font-semibold text-zinc-100 group-hover:text-white transition-colors">{SITE.name}</span>
           </Link>
           <div className="hidden md:flex items-center gap-6">
             {NAV_LINKS.map((link) => (
@@ -47,7 +59,7 @@ export function NavBar() {
                 </span>
               </TooltipTrigger>
               <TooltipContent className="bg-zinc-900 border-zinc-700 text-zinc-300">
-                En desarrollo — únete a la waitlist
+                En desarrollo, únete a la waitlist
               </TooltipContent>
             </Tooltip>
             <Link href="/waitlist">

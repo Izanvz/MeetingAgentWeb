@@ -1,4 +1,17 @@
+import type { Metadata } from "next";
 import { PIPELINE_STEPS } from "@/lib/constants";
+
+export const metadata: Metadata = {
+  title: "Arquitectura técnica | MeetingAgent",
+  description: "Arquitectura de MeetingAgent: LangGraph v0.4 con 4 nodos, faster-whisper local, Mistral 7b vía Ollama, ChromaDB y SQLite. 37 tests pasando. Open source.",
+  alternates: { canonical: "https://meetingagent.dev/how-it-works" },
+  openGraph: {
+    title: "Arquitectura técnica | MeetingAgent",
+    description: "LangGraph + faster-whisper + Mistral 7b + ChromaDB. Todo local, auditable y modificable.",
+    url: "https://meetingagent.dev/how-it-works",
+    images: [{ url: "/opengraph-image", width: 1200, height: 630 }],
+  },
+};
 import { Badge } from "@/components/ui/badge";
 
 const TECH_STACK = [
@@ -29,7 +42,7 @@ export default function HowItWorksPage() {
         </div>
         <h1 className="text-4xl font-bold text-zinc-100 mb-4">Arquitectura técnica</h1>
         <p className="text-zinc-400 max-w-xl mx-auto">
-          Diseñado para desarrolladores. Sin magia negra — todo es auditable y modificable.
+          Diseñado para desarrolladores. Sin magia negra: todo es auditable y modificable.
         </p>
       </div>
 

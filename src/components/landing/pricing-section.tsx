@@ -18,7 +18,7 @@ export function PricingSection() {
         >
           <h2 className="text-3xl md:text-4xl font-bold text-zinc-100 mb-4">Pricing</h2>
           <p className="text-zinc-400">
-            En desarrollo — los botones llevan a la waitlist.
+            En desarrollo. Los botones llevan a la waitlist.
           </p>
         </motion.div>
         <div className="grid md:grid-cols-3 gap-6">

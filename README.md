@@ -1,4 +1,4 @@
-# MeetingAgent — Landing page
+# MeetingAgent - Landing page
 
 Web de presentación del proyecto MeetingAgent. Construida con Next.js 14, Tailwind CSS y dark theme.
 

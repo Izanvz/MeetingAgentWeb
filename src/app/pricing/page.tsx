@@ -1,4 +1,17 @@
+import type { Metadata } from "next";
 import { PricingCard } from "@/components/shared/pricing-card";
+
+export const metadata: Metadata = {
+  title: "Pricing: Free, Pro y Enterprise | MeetingAgent",
+  description: "MeetingAgent es open source y gratuito para siempre. Plan Pro con integraciones avanzadas a €9/mes. Enterprise con on-premise, SLA y API access a €49/mes.",
+  alternates: { canonical: "https://meetingagent.dev/pricing" },
+  openGraph: {
+    title: "Pricing | MeetingAgent",
+    description: "Free para siempre · Pro €9/mes · Enterprise €49/mes. Simple, transparente, sin sorpresas.",
+    url: "https://meetingagent.dev/pricing",
+    images: [{ url: "/opengraph-image", width: 1200, height: 630 }],
+  },
+};
 import { PRICING_PLANS } from "@/lib/constants";
 
 const COMPARISON = [
@@ -15,7 +28,7 @@ const COMPARISON = [
 
 function CellValue({ val }: { val: string }) {
   if (val === "✓") return <span className="text-emerald-400 font-bold">✓</span>;
-  if (val === "✗") return <span className="text-zinc-700">—</span>;
+  if (val === "✗") return <span className="text-zinc-700">-</span>;
   return <span className="text-zinc-300 text-sm">{val}</span>;
 }
 
@@ -34,7 +47,7 @@ export default function PricingPage() {
             Transparente.
           </span>
         </h1>
-        <p className="text-zinc-400">En desarrollo — todos los planes llevan a la waitlist por ahora.</p>
+        <p className="text-zinc-400">En desarrollo. Todos los planes llevan a la waitlist por ahora.</p>
       </div>
 
       {/* Cards */}

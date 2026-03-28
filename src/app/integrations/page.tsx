@@ -1,4 +1,17 @@
+import type { Metadata } from "next";
 import { IntegrationCard } from "@/components/shared/integration-card";
+
+export const metadata: Metadata = {
+  title: "Integraciones disponibles y próximas | MeetingAgent",
+  description: "Conecta MeetingAgent con tu stack: Folder Watcher y subida manual ya disponibles. Zoom, Recall.ai, Notion, Obsidian, Jira y Linear próximamente.",
+  alternates: { canonical: "https://meetingagent.dev/integrations" },
+  openGraph: {
+    title: "Integraciones | MeetingAgent",
+    description: "Zoom, Recall.ai, Notion, Obsidian, Jira, Linear. Folder Watcher disponible hoy.",
+    url: "https://meetingagent.dev/integrations",
+    images: [{ url: "/opengraph-image", width: 1200, height: 630 }],
+  },
+};
 import { INTEGRATIONS } from "@/lib/constants";
 
 export default function IntegrationsPage() {

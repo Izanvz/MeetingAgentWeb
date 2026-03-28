@@ -1,4 +1,17 @@
+import type { Metadata } from "next";
 import { WaitlistForm } from "@/components/shared/waitlist-form";
+
+export const metadata: Metadata = {
+  title: "Únete a la waitlist | MeetingAgent",
+  description: "Únete a la waitlist de MeetingAgent. Sé el primero en acceder al pipeline de IA local para reuniones. Privacidad total, productividad absoluta, €0 para siempre.",
+  alternates: { canonical: "https://meetingagent.dev/waitlist" },
+  openGraph: {
+    title: "Únete a la waitlist | MeetingAgent",
+    description: "1.200+ desarrolladores procesando reuniones localmente. Privacidad total. €0.",
+    url: "https://meetingagent.dev/waitlist",
+    images: [{ url: "/opengraph-image", width: 1200, height: 630 }],
+  },
+};
 import { Shield, Zap, Lock } from "lucide-react";
 
 export default function WaitlistPage() {

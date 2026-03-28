@@ -30,16 +30,16 @@ export function DemoPreview() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <div className="inline-flex items-center gap-2 text-xs text-cyan-400 font-mono bg-cyan-950/30 border border-cyan-500/20 rounded-full px-3 py-1 mb-4">
+          <div className="inline-flex items-center gap-2 text-xs text-cyan-400 bg-cyan-950/30 border border-cyan-500/20 rounded-full px-3 py-1 mb-4" style={{ fontFamily: "var(--font-label)", letterSpacing: "0.08em", textTransform: "uppercase" }}>
             <Terminal className="w-3 h-3" />
-            live output
+            Live Output
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-zinc-100 mb-4">
             Míralo en acción
           </h2>
           <p className="text-zinc-400">
             Pipeline completo de{" "}
-            <span className="text-cyan-400 font-mono">00:41</span>{" "}
+            <span className="text-cyan-400" style={{ fontFamily: "var(--font-code)" }}>00:41</span>{" "}
             para una reunión de 30 minutos.
           </p>
         </motion.div>
@@ -52,7 +52,7 @@ export function DemoPreview() {
         >
           {/* Glow ring around terminal */}
           <div className="absolute -inset-px rounded-xl bg-gradient-to-r from-violet-500/20 via-cyan-500/20 to-emerald-500/20 blur-sm -z-10" />
-          <TerminalWindow title="meeting-agent — bash">
+          <TerminalWindow title="meeting-agent - bash">
             {DEMO_TERMINAL_LINES.slice(0, visibleLines).map((line, i) => (
               <div key={i} className={
                 line.startsWith("✓") ? "text-emerald-400" :

@@ -9,7 +9,7 @@ import { ArrowRight } from "lucide-react";
 export function IntegrationsSection() {
   return (
     <section className="py-24 px-4 relative overflow-hidden">
-      {/* Emerald glow — "available/success" section */}
+      {/* Emerald glow: "available/success" section */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[300px] bg-emerald-500/5 rounded-full blur-[100px]" />
       </div>

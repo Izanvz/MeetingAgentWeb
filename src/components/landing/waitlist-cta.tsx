@@ -34,13 +34,14 @@ export function WaitlistCTA() {
           </div>
 
           <h2 className="text-3xl md:text-5xl font-bold text-zinc-100 mb-4 leading-tight">
-            Sé el primero{" "}
+            Privacidad total.{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-cyan-400">
-              en acceder
+              Productividad absoluta.
             </span>
           </h2>
           <p className="text-zinc-400 mb-8 text-lg">
-            Una reunión bien documentada puede cambiar el rumbo de un proyecto.
+            1.200+ desarrolladores ya procesan sus reuniones localmente.{" "}
+            <span className="text-zinc-300">Sé el siguiente.</span>
           </p>
 
           <div className="flex justify-center mb-8">

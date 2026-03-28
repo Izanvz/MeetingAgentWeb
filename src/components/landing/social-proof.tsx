@@ -52,10 +52,10 @@ export function SocialProof() {
                 className="text-center group"
               >
                 {/* Glow behind number on hover */}
-                <div className={`text-3xl md:text-4xl font-bold font-mono mb-1 transition-all duration-300`}>
+                <div className="text-3xl md:text-4xl font-bold mb-1 transition-all duration-300" style={{ fontFamily: "var(--font-code)" }}>
                   <CountUp value={stat.value} suffix={stat.suffix} colorClass={color.text} />
                 </div>
-                <div className="text-sm text-zinc-500 group-hover:text-zinc-400 transition-colors">
+                <div className="text-xs text-zinc-500 group-hover:text-zinc-400 transition-colors uppercase tracking-[0.08em]" style={{ fontFamily: "var(--font-label)" }}>
                   {stat.label}
                 </div>
               </motion.div>

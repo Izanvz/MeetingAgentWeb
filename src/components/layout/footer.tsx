@@ -24,19 +24,25 @@ export function Footer() {
       <div className="max-w-6xl mx-auto px-4 py-8 flex flex-col md:flex-row items-center justify-between gap-4">
         <div className="flex items-center gap-2">
           <span className="text-violet-400 font-mono">▶</span>
-          <span className="text-sm text-zinc-400">{SITE.name} — built by Izan Villarejo</span>
+          <span className="text-sm text-zinc-400">{SITE.name} · built by Izan Villarejo</span>
         </div>
         <div className="flex items-center gap-5">
+          <Link href="/privacy" className="text-xs text-zinc-600 hover:text-zinc-400 transition-colors">
+            Privacidad
+          </Link>
           <Link href={SITE.github} target="_blank" rel="noopener noreferrer"
-            className="text-zinc-500 hover:text-zinc-300 transition-colors">
+            className="text-zinc-500 hover:text-zinc-300 transition-colors"
+            aria-label="GitHub: código fuente de MeetingAgent">
             <GithubIcon className="w-4 h-4" />
           </Link>
           <Link href={SITE.linkedin} target="_blank" rel="noopener noreferrer"
-            className="text-zinc-500 hover:text-zinc-300 transition-colors">
+            className="text-zinc-500 hover:text-zinc-300 transition-colors"
+            aria-label="LinkedIn de Izan Villarejo">
             <LinkedinIcon className="w-4 h-4" />
           </Link>
           <Link href={SITE.portfolio} target="_blank" rel="noopener noreferrer"
-            className="text-zinc-500 hover:text-zinc-300 transition-colors">
+            className="text-zinc-500 hover:text-zinc-300 transition-colors"
+            aria-label="Portfolio de Izan Villarejo">
             <ExternalLink className="w-4 h-4" />
           </Link>
           <span className="text-xs text-zinc-600">2026</span>

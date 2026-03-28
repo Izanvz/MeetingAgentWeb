@@ -43,7 +43,11 @@ export function WaitlistForm({ className }: { className?: string }) {
 
   return (
     <form onSubmit={handleSubmit} className={`flex gap-2 max-w-md ${className ?? ""}`}>
+      <label htmlFor="waitlist-email" className="sr-only">
+        Correo electrónico
+      </label>
       <Input
+        id="waitlist-email"
         type="email"
         placeholder="tu@email.com"
         value={email}

@@ -22,6 +22,8 @@
   --radius: 0.5rem;
   --font-sans: "Geist", "Geist Fallback", ui-sans-serif, system-ui, sans-serif;
   --font-mono: "Geist Mono", "Geist Mono Fallback", ui-monospace, monospace;
+  --font-label: var(--font-space-grotesk), "Geist", ui-sans-serif, system-ui, sans-serif;
+  --font-code: var(--font-jetbrains-mono), "Geist Mono", ui-monospace, monospace;
 }
 
 * {
@@ -51,6 +53,36 @@ body::before {
   );
   background-size: 28px 28px;
   pointer-events: none;
+}
+
+/* ── Animated background orbs ─────────────────────────────── */
+@keyframes orb-drift-1 {
+  0%, 100% { transform: translate(-50%, -50%) scale(1);    }
+  25%       { transform: translate(-42%, -58%) scale(1.08); }
+  50%       { transform: translate(-55%, -44%) scale(0.94); }
+  75%       { transform: translate(-46%, -52%) scale(1.04); }
+}
+@keyframes orb-drift-2 {
+  0%, 100% { transform: translate(0%, 0%)   scale(1);    }
+  33%       { transform: translate(8%, -12%) scale(1.12); }
+  66%       { transform: translate(-6%, 8%)  scale(0.92); }
+}
+@keyframes orb-drift-3 {
+  0%, 100% { transform: translate(0%, 0%)   scale(1);    }
+  40%       { transform: translate(-10%, 8%) scale(1.06); }
+  70%       { transform: translate(6%, -6%)  scale(0.96); }
+}
+@keyframes orb-drift-4 {
+  0%, 100% { transform: translate(0%, 0%)   scale(1);    }
+  50%       { transform: translate(10%, 6%)  scale(1.15); }
+}
+@keyframes orb-pulse {
+  0%, 100% { opacity: 0.7; }
+  50%       { opacity: 1;   }
+}
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position:  200% center; }
 }
 
 ::-webkit-scrollbar { width: 6px; }
