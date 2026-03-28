@@ -53,7 +53,7 @@ export function NavBar() {
           </div>
           <div className="flex items-center gap-3">
             <Tooltip>
-              <TooltipTrigger asChild>
+              <TooltipTrigger>
                 <button disabled className="inline-flex items-center justify-center rounded-md border border-zinc-700 px-3 py-1.5 text-sm text-zinc-500 cursor-not-allowed opacity-60 select-none">
                   Login
                 </button>
