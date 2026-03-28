@@ -13,6 +13,10 @@ export function WaitlistForm({ className }: { className?: string }) {
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     if (!email) return;
+    if (!SITE.formspreeId) {
+      toast.error("Formulario no configurado", { description: "Contacta al administrador." });
+      return;
+    }
     setLoading(true);
     try {
       const res = await fetch(`https://formspree.io/f/${SITE.formspreeId}`, {

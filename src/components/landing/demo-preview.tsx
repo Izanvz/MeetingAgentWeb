@@ -1,6 +1,6 @@
 "use client";
-import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
+import { motion, useInView } from "framer-motion";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { TerminalWindow } from "@/components/shared/terminal-window";
@@ -9,12 +9,15 @@ import { ArrowRight, Terminal } from "lucide-react";
 
 export function DemoPreview() {
   const [visibleLines, setVisibleLines] = useState(0);
+  const ref = useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   useEffect(() => {
+    if (!isInView) return;
     if (visibleLines >= DEMO_TERMINAL_LINES.length) return;
     const timeout = setTimeout(() => setVisibleLines((v) => v + 1), 80);
     return () => clearTimeout(timeout);
-  }, [visibleLines]);
+  }, [visibleLines, isInView]);
 
   return (
     <section className="py-24 px-4 relative overflow-hidden">
@@ -45,6 +48,7 @@ export function DemoPreview() {
         </motion.div>
 
         <motion.div
+          ref={ref}
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

@@ -1,5 +1,12 @@
 import type { Metadata } from "next";
 import { Hero } from "@/components/landing/hero";
+import { SocialProof } from "@/components/landing/social-proof";
+import { DemoPreview } from "@/components/landing/demo-preview";
+import { ProblemSolution } from "@/components/landing/problem-solution";
+import { HowItWorksSection } from "@/components/landing/how-it-works-section";
+import { IntegrationsSection } from "@/components/landing/integrations-section";
+import { PricingSection } from "@/components/landing/pricing-section";
+import { WaitlistCTA } from "@/components/landing/waitlist-cta";
 
 export const metadata: Metadata = {
   title: "MeetingAgent | Tus reuniones → acción en 2 minutos",
@@ -12,13 +19,6 @@ export const metadata: Metadata = {
     images: [{ url: "/opengraph-image", width: 1200, height: 630 }],
   },
 };
-import { SocialProof } from "@/components/landing/social-proof";
-import { DemoPreview } from "@/components/landing/demo-preview";
-import { ProblemSolution } from "@/components/landing/problem-solution";
-import { HowItWorksSection } from "@/components/landing/how-it-works-section";
-import { IntegrationsSection } from "@/components/landing/integrations-section";
-import { PricingSection } from "@/components/landing/pricing-section";
-import { WaitlistCTA } from "@/components/landing/waitlist-cta";
 
 export default function HomePage() {
   return (

@@ -44,7 +44,7 @@ export function ProblemSolution() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-0 rounded-xl overflow-hidden border border-zinc-800">
+        <div className="relative grid md:grid-cols-2 gap-0 rounded-xl overflow-hidden border border-zinc-800">
           {/* The Old Way */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
