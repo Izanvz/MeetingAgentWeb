@@ -10,7 +10,6 @@ const NAV_LINKS = [
   { label: "Demo", href: "/demo" },
   { label: "Cómo funciona", href: "/how-it-works" },
   { label: "Integraciones", href: "/integrations" },
-  { label: "Pricing", href: "/pricing" },
 ];
 
 export function NavBar() {

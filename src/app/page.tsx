@@ -5,7 +5,6 @@ import { DemoPreview } from "@/components/landing/demo-preview";
 import { ProblemSolution } from "@/components/landing/problem-solution";
 import { HowItWorksSection } from "@/components/landing/how-it-works-section";
 import { IntegrationsSection } from "@/components/landing/integrations-section";
-import { PricingSection } from "@/components/landing/pricing-section";
 import { WaitlistCTA } from "@/components/landing/waitlist-cta";
 
 export const metadata: Metadata = {
@@ -29,7 +28,6 @@ export default function HomePage() {
       <ProblemSolution />
       <HowItWorksSection />
       <IntegrationsSection />
-      <PricingSection />
       <WaitlistCTA />
     </>
   );
